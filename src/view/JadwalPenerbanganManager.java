@@ -5,6 +5,12 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SVE14132CW
@@ -35,8 +41,8 @@ public class JadwalPenerbanganManager extends javax.swing.JFrame {
         KategoriBox = new javax.swing.JComboBox<>();
         jbcari = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jbedit = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        jTable = new javax.swing.JTable();
+        jbEdit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,7 +72,7 @@ public class JadwalPenerbanganManager extends javax.swing.JFrame {
             }
         });
 
-        jbedit.setModel(new javax.swing.table.DefaultTableModel(
+        jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -77,12 +83,12 @@ public class JadwalPenerbanganManager extends javax.swing.JFrame {
                 "Id Penerbangan", "Departure", "Arrival", "Asal", "Tujuan", "Pesawat", "Harga"
             }
         ));
-        jScrollPane1.setViewportView(jbedit);
+        jScrollPane1.setViewportView(jTable);
 
-        jButton1.setText("Edit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbEdit.setText("Edit");
+        jbEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbEditActionPerformed(evt);
             }
         });
 
@@ -109,7 +115,7 @@ public class JadwalPenerbanganManager extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(jbEdit)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbdelete)
                         .addGap(59, 59, 59))
@@ -136,7 +142,7 @@ public class JadwalPenerbanganManager extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(jbEdit)
                     .addComponent(jbdelete))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jblogout, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -154,56 +160,62 @@ public class JadwalPenerbanganManager extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbcariActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEditActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbEditActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JadwalPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JadwalPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JadwalPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JadwalPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JadwalPenerbanganManager().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> KategoriBox;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable;
+    private javax.swing.JButton jbEdit;
     private javax.swing.JButton jbcari;
     private javax.swing.JButton jbdelete;
-    private javax.swing.JTable jbedit;
     private javax.swing.JButton jblogout;
     private javax.swing.JTextField tfSearch;
     // End of variables declaration//GEN-END:variables
+
+    public JComboBox<String> getKategoriBox() {
+        return KategoriBox;
+    }
+
+    public JTable getjTable() {
+        return jTable;
+    }
+
+    public JButton getJbEdit() {
+        return jbEdit;
+    }
+
+    public JButton getJbcari() {
+        return jbcari;
+    }
+
+    public JButton getJbdelete() {
+        return jbdelete;
+    }
+
+    public JButton getJblogout() {
+        return jblogout;
+    }
+
+    public JTextField getTfSearch() {
+        return tfSearch;
+    }
+
+    
+    public void setActionListener(ActionListener ae) {
+        jbEdit.addActionListener(ae);
+        jbdelete.addActionListener(ae);
+        jblogout.addActionListener(ae);
+        jbcari.addActionListener(ae);
+    }
+
 }

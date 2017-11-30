@@ -5,6 +5,12 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SVE14132CW
@@ -163,37 +169,7 @@ public class Rute extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Rute.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Rute.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Rute.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Rute.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Rute().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CariButton;
@@ -210,4 +186,51 @@ public class Rute extends javax.swing.JFrame {
     private javax.swing.JButton jbLogout;
     private javax.swing.JButton jbMenu;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getCariButton() {
+        return CariButton;
+    }
+
+    public JButton getDeleteButton() {
+        return DeleteButton;
+    }
+
+    public JButton getEditButton() {
+        return EditButton;
+    }
+
+    public JComboBox<String> getKategoriBox() {
+        return KategoriBox;
+    }
+
+    public JTable getRuteTable() {
+        return RuteTable;
+    }
+
+    public JTextField getSearchField() {
+        return SearchField;
+    }
+
+    public JButton getTambahButton() {
+        return TambahButton;
+    }
+
+    public JButton getJbLogout() {
+        return jbLogout;
+    }
+
+    public JButton getJbMenu() {
+        return jbMenu;
+    }
+
+public void setActionListener(ActionListener ae) {
+        jbMenu.addActionListener(ae);
+        jbLogout.addActionListener(ae);
+        TambahButton.addActionListener(ae);
+        SearchField.addActionListener(ae);
+        KategoriBox.addActionListener(ae);
+        EditButton.addActionListener(ae);
+        CariButton.addActionListener(ae);
+        DeleteButton.addActionListener(ae);
+    }
 }

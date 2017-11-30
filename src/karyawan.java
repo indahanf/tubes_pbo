@@ -14,13 +14,17 @@ public class karyawan extends person{
     private String idKaryawan;
     private String jabatan;
     private double gaji;
-    private ArrayList<transaksi> daftarTransaksi=new ArrayList<>();
-    private int jumTransaksi;
+    private String idManager;
 
-    public karyawan(String idKaryawan, String nama, String JK, int umur) {
+    public karyawan(String idKaryawan, String jabatan, double gaji, String idManager, String nama, String JK, int umur) {
         super(nama, JK, umur);
         this.idKaryawan = idKaryawan;
+        this.jabatan = jabatan;
+        this.gaji = gaji;
+        this.idManager = idManager;
     }
+
+    
 
     public String getIdKaryawan() {
         return idKaryawan;
@@ -33,17 +37,9 @@ public class karyawan extends person{
     public double getGaji() {
         return gaji;
     }
-    
-    public void addTransaksi(transaksi t) {
-        daftarTransaksi.add(t);
-    }
 
-    public transaksi getDaftarTransaksi(int i) {
-        return daftarTransaksi.get(i);
-    }
-
-    public int getJumTransaksi() {
-        return jumTransaksi;
+    public String getIdManager() {
+        return idManager;
     }
     
     

@@ -5,6 +5,12 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import org.jdesktop.swingx.JXDatePicker;
+
 /**
  *
  * @author SVE14132CW
@@ -45,7 +51,7 @@ public class TiketPembelian extends javax.swing.JFrame {
         tfUmurPenumpang = new javax.swing.JLabel();
         tfNamaPenumpang = new javax.swing.JTextField();
         tfNoKTP = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        tfUmur = new javax.swing.JTextField();
         tfJKPenumpang = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -104,7 +110,7 @@ public class TiketPembelian extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tfUmur, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tfUmurPenumpang))
                             .addComponent(jXDatePicker1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -145,7 +151,7 @@ public class TiketPembelian extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfUmur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfUmurPenumpang))
                 .addGap(24, 24, 24)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -194,38 +200,6 @@ public class TiketPembelian extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TiketPembelian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TiketPembelian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TiketPembelian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TiketPembelian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TiketPembelian().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BeliButton1;
@@ -242,11 +216,57 @@ public class TiketPembelian extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
     private org.jdesktop.swingx.JXDatePicker jXDatePicker1;
     private javax.swing.JTextField tfJKPenumpang;
     private javax.swing.JTextField tfNamaPenumpang;
     private javax.swing.JTextField tfNoKTP;
+    private javax.swing.JTextField tfUmur;
     private javax.swing.JLabel tfUmurPenumpang;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBeliButton1() {
+        return BeliButton1;
+    }
+
+    public JTextField getIdPenerbanganField() {
+        return IdPenerbanganField;
+    }
+
+    public JTextField getJumTiketField() {
+        return JumTiketField;
+    }
+
+    public JButton getMenuButton1() {
+        return MenuButton1;
+    }
+
+    public JXDatePicker getjXDatePicker1() {
+        return jXDatePicker1;
+    }
+
+    public JTextField getTfJKPenumpang() {
+        return tfJKPenumpang;
+    }
+
+    public JTextField getTfNamaPenumpang() {
+        return tfNamaPenumpang;
+    }
+
+    public JTextField getTfNoKTP() {
+        return tfNoKTP;
+    }
+
+    public JTextField getTfUmur() {
+        return tfUmur;
+    }
+
+public void setActionListener(ActionListener ae) {
+        tfUmur.addActionListener(ae);
+        tfNoKTP.addActionListener(ae);
+        tfNamaPenumpang.addActionListener(ae);
+        MenuButton1.addActionListener(ae);
+        JumTiketField.addActionListener(ae);
+        BeliButton1.addActionListener(ae);
+        IdPenerbanganField.addActionListener(ae);
+    }
 }

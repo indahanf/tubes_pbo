@@ -5,6 +5,10 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SVE14132CW
@@ -163,37 +167,7 @@ public class KaryawanForm extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(KaryawanForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(KaryawanForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(KaryawanForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(KaryawanForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new KaryawanForm().setVisible(true);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JLabel NamaManager;
@@ -215,4 +189,48 @@ public class KaryawanForm extends javax.swing.JFrame {
     private javax.swing.JTextField tfPassword;
     private javax.swing.JTextField tfUmur;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getJbBatal() {
+        return jbBatal;
+    }
+
+    public JTextField getTfGaji() {
+        return tfGaji;
+    }
+
+    public JTextField getTfIDKaryawan() {
+        return tfIDKaryawan;
+    }
+
+    public JTextField getTfJK() {
+        return tfJK;
+    }
+
+    public JTextField getTfJabatan() {
+        return tfJabatan;
+    }
+
+    public JTextField getTfNama() {
+        return tfNama;
+    }
+
+    public JTextField getTfPassword() {
+        return tfPassword;
+    }
+
+    public JTextField getTfUmur() {
+        return tfUmur;
+    }
+
+    public void setActionListener(ActionListener ae) {
+        tfIDKaryawan.addActionListener(ae);
+        tfNama.addActionListener(ae);
+        tfJK.addActionListener(ae);
+        tfUmur.addActionListener(ae);
+        tfJabatan.addActionListener(ae);
+        tfGaji.addActionListener(ae);
+        tfPassword.addActionListener(ae);
+        jbBatal.addActionListener(ae);
+        jbSubmit.addActionListener(ae);
+    }
 }

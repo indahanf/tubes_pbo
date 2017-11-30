@@ -5,6 +5,10 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SVE14132CW
@@ -264,38 +268,7 @@ public class TiketViewPembelian extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TiketViewPembelian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TiketViewPembelian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TiketViewPembelian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TiketViewPembelian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TiketViewPembelian().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JLabel NamaKaryawan2;
@@ -323,4 +296,66 @@ public class TiketViewPembelian extends javax.swing.JFrame {
     private javax.swing.JTextField tfTotalHarga;
     private javax.swing.JTextField tfUmur2;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getTbBatal2() {
+        return tbBatal2;
+    }
+
+    public JButton getTbLanjut() {
+        return tbLanjut;
+    }
+
+    public JButton getTbMenu2() {
+        return tbMenu2;
+    }
+
+    public JTextField getTfIDPelanggan() {
+        return tfIDPelanggan;
+    }
+
+    public JTextField getTfIDPenerbangan2() {
+        return tfIDPenerbangan2;
+    }
+
+    public JTextField getTfJK() {
+        return tfJK;
+    }
+
+    public JTextField getTfJumlahTiket2() {
+        return tfJumlahTiket2;
+    }
+
+    public JTextField getTfKTP2() {
+        return tfKTP2;
+    }
+
+    public JTextField getTfNamaPelanggan2() {
+        return tfNamaPelanggan2;
+    }
+
+    public JTextField getTfTanggal2() {
+        return tfTanggal2;
+    }
+
+    public JTextField getTfTotalHarga() {
+        return tfTotalHarga;
+    }
+
+    public JTextField getTfUmur2() {
+        return tfUmur2;
+    }
+
+    public void setActionListener(ActionListener ae) {
+        tbBatal2.addActionListener(ae);
+        tbLanjut.addActionListener(ae);
+        tbMenu2.addActionListener(ae);
+        tfIDPelanggan.addActionListener(ae);
+        tfIDPenerbangan2.addActionListener(ae);
+        tfJK.addActionListener(ae);
+        tfJumlahTiket2.addActionListener(ae);
+        tfKTP2.addActionListener(ae);
+        tfNamaPelanggan2.addActionListener(ae);
+        tfTotalHarga.addActionListener(ae);
+        tfUmur2.addActionListener(ae);
+    }
 }

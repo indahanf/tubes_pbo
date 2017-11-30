@@ -5,6 +5,12 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SVE14132CW
@@ -154,38 +160,7 @@ public class KaryawanView extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(KaryawanView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(KaryawanView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(KaryawanView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(KaryawanView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new KaryawanView().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable KaryawanTable;
@@ -200,4 +175,51 @@ public class KaryawanView extends javax.swing.JFrame {
     private javax.swing.JButton jbTambah;
     private javax.swing.JTextField tfSearch;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getKaryawanTable() {
+        return KaryawanTable;
+    }
+
+    public JComboBox<String> getCbKategori() {
+        return cbKategori;
+    }
+
+    public JButton getJbCari() {
+        return jbCari;
+    }
+
+    public JButton getJbDelete() {
+        return jbDelete;
+    }
+
+    public JButton getJbEdit() {
+        return jbEdit;
+    }
+
+    public JButton getJbLogout() {
+        return jbLogout;
+    }
+
+    public JButton getJbMenu() {
+        return jbMenu;
+    }
+
+    public JButton getJbTambah() {
+        return jbTambah;
+    }
+
+    public JTextField getTfSearch() {
+        return tfSearch;
+    }
+
+    public void setActionListener(ActionListener ae) {
+        jbEdit.addActionListener(ae);
+        jbTambah.addActionListener(ae);
+        jbLogout.addActionListener(ae);
+        jbCari.addActionListener(ae);
+        jbMenu.addActionListener(ae);
+        tfSearch.addActionListener(ae);
+        cbKategori.addActionListener(ae);
+        jbDelete.addActionListener(ae);
+    }
 }

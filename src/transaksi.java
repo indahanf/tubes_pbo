@@ -15,7 +15,21 @@ public class transaksi {
     private Date hariTanggal;
     private penumpang dataPenumpang;
     private jadwal dataPerjalanan;
+    private karyawan karyawan;
 
+    public transaksi(Date hariTanggal, penumpang dataPenumpang, jadwal dataPerjalanan, karyawan karyawan) {
+        this.hariTanggal = hariTanggal;
+        this.dataPenumpang = dataPenumpang;
+        this.dataPerjalanan = dataPerjalanan;
+        this.karyawan = karyawan;
+    }
+
+    public karyawan getKaryawan() {
+        return karyawan;
+    }
+    
+    
+    
     public void setHariTanggal(Date hariTanggal) {
         this.hariTanggal = hariTanggal;
     }

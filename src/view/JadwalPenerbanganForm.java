@@ -5,6 +5,11 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import org.jdesktop.swingx.JXDatePicker;
+
 /**
  *
  * @author SVE14132CW
@@ -173,38 +178,7 @@ public class JadwalPenerbanganForm extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JadwalPenerbanganForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JadwalPenerbanganForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JadwalPenerbanganForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JadwalPenerbanganForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JadwalPenerbanganForm().setVisible(true);
-            }
-        });
-    }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -225,4 +199,43 @@ public class JadwalPenerbanganForm extends javax.swing.JFrame {
     private javax.swing.JTextField tfIDRute;
     private javax.swing.JTextField tfidpenerbangan;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getJbBatal() {
+        return jbBatal;
+    }
+
+    public JButton getJbSubmit() {
+        return jbSubmit;
+    }
+
+    public JXDatePicker getJxArrival() {
+        return jxArrival;
+    }
+
+    public JXDatePicker getJxDeparture() {
+        return jxDeparture;
+    }
+
+    public JTextField getTfHarga() {
+        return tfHarga;
+    }
+
+    public JTextField getTfIDPesawat() {
+        return tfIDPesawat;
+    }
+
+    public JTextField getTfIDRute() {
+        return tfIDRute;
+    }
+
+    public JTextField getTfidpenerbangan() {
+        return tfidpenerbangan;
+    }
+    
+    public void setActionListener(ActionListener ae) {
+        jbBatal.addActionListener(ae);
+        jbSubmit.addActionListener(ae);
+        
+    }
+    
 }
