@@ -15,14 +15,20 @@ public class karyawan extends person{
     private String jabatan;
     private double gaji;
     private String idManager;
+    private String username;
+    private String pass;
 
-    public karyawan(String idKaryawan, String jabatan, double gaji, String idManager, String nama, String JK, int umur) {
+    public karyawan(String idKaryawan, String jabatan, double gaji, String idManager, String username, String pass, String nama, String JK, int umur) {
         super(nama, JK, umur);
         this.idKaryawan = idKaryawan;
         this.jabatan = jabatan;
         this.gaji = gaji;
         this.idManager = idManager;
+        this.username = username;
+        this.pass = pass;
     }
+
+    
 
     
 
@@ -40,6 +46,14 @@ public class karyawan extends person{
 
     public String getIdManager() {
         return idManager;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPass() {
+        return pass;
     }
     
     

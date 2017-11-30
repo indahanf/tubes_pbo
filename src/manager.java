@@ -13,12 +13,18 @@ import java.util.ArrayList;
 public class manager extends person {
     private String idManager;
     private double gaji;
-    private ArrayList<karyawan> daftarKaryawan;
+    private String username;
+    private String pass;
 
-    public manager(String idManager, String nama, String JK, int umur) {
+    public manager(String idManager, double gaji, String username, String pass, String nama, String JK, int umur) {
         super(nama, JK, umur);
         this.idManager = idManager;
+        this.gaji = gaji;
+        this.username = username;
+        this.pass = pass;
     }
+
+    
 
     public double getGaji() {
         return gaji;
@@ -32,8 +38,13 @@ public class manager extends person {
         return idManager;
     }
     
-    public void addKaryawan(karyawan k) {
-        daftarKaryawan.add(k);
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPass() {
+        return pass;
     }
     
     
