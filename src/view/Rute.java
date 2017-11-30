@@ -207,8 +207,8 @@ public class Rute extends javax.swing.JFrame {
         return RuteTable;
     }
 
-    public JTextField getSearchField() {
-        return SearchField;
+    public String getSearchField() {
+        return SearchField.getText();
     }
 
     public JButton getTambahButton() {

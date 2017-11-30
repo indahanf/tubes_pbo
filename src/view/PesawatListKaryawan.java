@@ -160,8 +160,8 @@ public class PesawatListKaryawan extends javax.swing.JFrame {
         return PesawatTable;
     }
 
-    public JTextField getSearchField() {
-        return SearchField;
+    public String getSearchField() {
+        return SearchField.getText();
     }
 
     public JButton getBtCari() {

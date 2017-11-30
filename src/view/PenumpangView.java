@@ -218,8 +218,8 @@ public class PenumpangView extends javax.swing.JFrame {
         return jbTambah;
     }
 
-    public JTextField getTfSearch() {
-        return tfSearch;
+    public String getTfSearch() {
+        return tfSearch.getText();
     }
 
 public void setActionListener(ActionListener ae) {

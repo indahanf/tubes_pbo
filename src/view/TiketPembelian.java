@@ -6,8 +6,10 @@
 package view;
 
 import java.awt.event.ActionListener;
+import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import org.jdesktop.swingx.JXDatePicker;
 
@@ -52,7 +54,7 @@ public class TiketPembelian extends javax.swing.JFrame {
         tfNamaPenumpang = new javax.swing.JTextField();
         tfNoKTP = new javax.swing.JTextField();
         tfUmur = new javax.swing.JTextField();
-        tfJKPenumpang = new javax.swing.JTextField();
+        tfJK = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,6 +89,12 @@ public class TiketPembelian extends javax.swing.JFrame {
 
         tfUmurPenumpang.setText("tahun");
 
+        tfNamaPenumpang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNamaPenumpangActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -118,7 +126,7 @@ public class TiketPembelian extends javax.swing.JFrame {
                             .addComponent(JumTiketField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
                             .addComponent(tfNamaPenumpang, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tfNoKTP, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfJKPenumpang, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(tfJK))
                         .addGap(105, 105, 105))))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
@@ -156,7 +164,7 @@ public class TiketPembelian extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(tfJKPenumpang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfJK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -197,6 +205,10 @@ public class TiketPembelian extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tfNamaPenumpangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNamaPenumpangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNamaPenumpangActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -217,7 +229,7 @@ public class TiketPembelian extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel3;
     private org.jdesktop.swingx.JXDatePicker jXDatePicker1;
-    private javax.swing.JTextField tfJKPenumpang;
+    private javax.swing.JTextField tfJK;
     private javax.swing.JTextField tfNamaPenumpang;
     private javax.swing.JTextField tfNoKTP;
     private javax.swing.JTextField tfUmur;
@@ -228,38 +240,64 @@ public class TiketPembelian extends javax.swing.JFrame {
         return BeliButton1;
     }
 
-    public JTextField getIdPenerbanganField() {
-        return IdPenerbanganField;
+    public String getIdPenerbanganField() {
+        return IdPenerbanganField.getText();
     }
 
-    public JTextField getJumTiketField() {
-        return JumTiketField;
+    public String getJumTiketField() {
+        return JumTiketField.getText();
     }
 
     public JButton getMenuButton1() {
         return MenuButton1;
     }
 
-    public JXDatePicker getjXDatePicker1() {
-        return jXDatePicker1;
+    public Date getjXDatePicker1() {
+        return jXDatePicker1.getDate();
     }
 
-    public JTextField getTfJKPenumpang() {
-        return tfJKPenumpang;
+    public JTextField getTfJK() {
+        return tfJK;
     }
 
-    public JTextField getTfNamaPenumpang() {
-        return tfNamaPenumpang;
+    public String getTfNamaPenumpang() {
+        return tfNamaPenumpang.getText();
     }
 
-    public JTextField getTfNoKTP() {
-        return tfNoKTP;
+    public String getTfNoKTP() {
+        return tfNoKTP.getText();
     }
 
-    public JTextField getTfUmur() {
-        return tfUmur;
+    public String getTfUmur() {
+        return tfUmur.getText();
     }
 
+    public void setIdPenerbanganField(JTextField IdPenerbanganField) {
+        this.IdPenerbanganField = IdPenerbanganField;
+    }
+
+    public void setjXDatePicker1(JXDatePicker jXDatePicker1) {
+        this.jXDatePicker1 = jXDatePicker1;
+    }
+
+    public void setTfJK(JTextField tfJK) {
+        this.tfJK = tfJK;
+    }
+
+
+    public void setTfNamaPenumpang(JTextField tfNamaPenumpang) {
+        this.tfNamaPenumpang = tfNamaPenumpang;
+    }
+
+    public void setTfNoKTP(JTextField tfNoKTP) {
+        this.tfNoKTP = tfNoKTP;
+    }
+
+    public void setTfUmur(JTextField tfUmur) {
+        this.tfUmur = tfUmur;
+    }
+
+    
 public void setActionListener(ActionListener ae) {
         tfUmur.addActionListener(ae);
         tfNoKTP.addActionListener(ae);
@@ -268,5 +306,6 @@ public void setActionListener(ActionListener ae) {
         JumTiketField.addActionListener(ae);
         BeliButton1.addActionListener(ae);
         IdPenerbanganField.addActionListener(ae);
-    }
+        tfJK.addActionListener(ae);
+        }
 }

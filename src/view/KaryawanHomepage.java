@@ -6,6 +6,7 @@
 package view;
 
 import java.awt.event.ActionListener;
+import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import org.jdesktop.swingx.JXDatePicker;
@@ -168,16 +169,16 @@ public class KaryawanHomepage extends javax.swing.JFrame {
         return jbLogout;
     }
 
-    public JXDatePicker getJxTanggal() {
-        return jxTanggal;
+    public Date getJxTanggal() {
+        return jxTanggal.getDate();
     }
 
-    public JTextField getTfAsal() {
-        return tfAsal;
+    public String getTfAsal() {
+        return tfAsal.getText();
     }
 
-    public JTextField getTfTujuan() {
-        return tfTujuan;
+    public String getTfTujuan() {
+        return tfTujuan.getText();
     }
 
 public void setActionListener(ActionListener ae) {

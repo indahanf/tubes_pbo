@@ -194,32 +194,32 @@ public class KaryawanForm extends javax.swing.JFrame {
         return jbBatal;
     }
 
-    public JTextField getTfGaji() {
-        return tfGaji;
+    public String getTfGaji() {
+        return tfGaji.getText();
     }
 
-    public JTextField getTfIDKaryawan() {
-        return tfIDKaryawan;
+    public String getTfIDKaryawan() {
+        return tfIDKaryawan.getText();
     }
 
-    public JTextField getTfJK() {
-        return tfJK;
+    public String getTfJK() {
+        return tfJK.getText();
     }
 
-    public JTextField getTfJabatan() {
-        return tfJabatan;
+    public String getTfJabatan() {
+        return tfJabatan.getText();
     }
 
-    public JTextField getTfNama() {
-        return tfNama;
+    public String getTfNama() {
+        return tfNama.getText();
     }
 
-    public JTextField getTfPassword() {
-        return tfPassword;
+    public String getTfPassword() {
+        return tfPassword.getText();
     }
 
-    public JTextField getTfUmur() {
-        return tfUmur;
+    public String getTfUmur() {
+        return tfUmur.getText();
     }
 
     public void setActionListener(ActionListener ae) {

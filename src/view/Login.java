@@ -128,12 +128,12 @@ public class Login extends javax.swing.JFrame {
         return btlogin;
     }
 
-    public JTextField getTfpassword() {
-        return tfpassword;
+    public String getTfpassword() {
+        return tfpassword.getText();
     }
 
-    public JTextField getTfuser() {
-        return tfuser;
+    public String getTfuser() {
+        return tfuser.getText();
     }
 
     public void setActionListener(ActionListener ae) {

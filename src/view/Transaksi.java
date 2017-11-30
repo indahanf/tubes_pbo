@@ -169,8 +169,8 @@ public class Transaksi extends javax.swing.JFrame {
         return LogoutButton;
     }
 
-    public JTextField getSearchField() {
-        return SearchField;
+    public String getSearchField() {
+        return SearchField.getText();
     }
 
     public JTable getTransaksiTable() {

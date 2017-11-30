@@ -229,20 +229,20 @@ public class PenumpangForm extends javax.swing.JFrame {
         return rbWanita;
     }
 
-    public JTextField getTfIDPenumpang() {
-        return tfIDPenumpang;
+    public String getTfIDPenumpang() {
+        return tfIDPenumpang.getText();
     }
 
-    public JTextField getTfKTP() {
-        return tfKTP;
+    public String getTfKTP() {
+        return tfKTP.getText();
     }
 
-    public JTextField getTfNama() {
-        return tfNama;
+    public String getTfNama() {
+        return tfNama.getText();
     }
 
-    public JTextField getTfUmur() {
-        return tfUmur;
+    public String getTfUmur() {
+        return tfUmur.getText();
     }
 
 public void setActionListener(ActionListener ae) {
