@@ -54,46 +54,32 @@
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="tfNama" min="-2" pref="322" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="tfKTP" min="-2" pref="322" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="54" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="rbPria" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
-                                          <Component id="rbWanita" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="tfUmur" min="-2" pref="56" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jXDatePicker1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="IdPenerbanganField" alignment="0" min="-2" pref="322" max="-2" attributes="0"/>
-                                      <Component id="JumTiketField" alignment="0" min="-2" pref="322" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jTextField1" min="-2" pref="96" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="tfUmurPenumpang" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jXDatePicker1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="IdPenerbanganField" alignment="0" pref="322" max="32767" attributes="0"/>
+                              <Component id="JumTiketField" alignment="0" pref="322" max="32767" attributes="0"/>
+                              <Component id="tfNamaPenumpang" alignment="0" max="32767" attributes="0"/>
+                              <Component id="tfNoKTP" alignment="0" max="32767" attributes="0"/>
+                              <Component id="tfJKPenumpang" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -103,7 +89,7 @@
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="97" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -126,33 +112,28 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tfNama" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tfNamaPenumpang" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tfKTP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tfNoKTP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rbPria" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rbWanita" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jXDatePicker1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="tfUmur" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tfUmurPenumpang" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tfJKPenumpang" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jXDatePicker1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -228,16 +209,6 @@
             <Property name="text" type="java.lang.String" value="Jumlah Tiket"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tfNama">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="tfUmur">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="IdPenerbanganField">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
@@ -248,21 +219,6 @@
         <Component class="javax.swing.JTextField" name="JumTiketField">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="tfKTP">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="rbPria">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Pria"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="rbWanita">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Wanita"/>
           </Properties>
         </Component>
         <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePicker1">
@@ -277,10 +233,18 @@
             <Property name="text" type="java.lang.String" value="Beli"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="tfUmurPenumpang">
           <Properties>
             <Property name="text" type="java.lang.String" value="tahun"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tfNamaPenumpang">
+        </Component>
+        <Component class="javax.swing.JTextField" name="tfNoKTP">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="tfJKPenumpang">
         </Component>
       </SubComponents>
     </Container>
